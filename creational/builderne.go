@@ -53,6 +53,20 @@ func createUser() *user {
 	return new(user)
 }
 
+type adminne struct {
+	name string
+}
+
+func (a adminne) test() adminne {
+	a.name = "123"
+	return a
+}
+
+func (a adminne) test1() adminne{
+	a.name = "asdasd"
+	return a
+}
+
 //func newUser(name string, phone string) *user {
 //	return &user{name: name, phone: phone}
 //}

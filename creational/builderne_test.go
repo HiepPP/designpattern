@@ -12,5 +12,8 @@ func TestBuilderNe(t *testing.T) {
 	}
 	name := admin.getUserName()
 	fmt.Println(name)
-	fmt.Printf("%v", admin)
+	fmt.Printf("%v\n", admin)
+
+	asd := adminne{}.test1().test()
+	fmt.Println(asd)
 }
