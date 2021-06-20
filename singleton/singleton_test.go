@@ -23,3 +23,20 @@ func TestGetInstance(t *testing.T) {
 		t.Errorf("After calling 'AddOne' using the second counter, the current count must be 2 but was %d\n", currentCounter)
 	}
 }
+
+func TestOnlyYou(t *testing.T) {
+	onlyYou := GetOnlyYou()
+	if onlyYou == nil {
+		t.Error("Onlyyou error")
+	}
+
+	result1 := onlyYou.AddOther()
+	if result1 != 1 {
+		t.Errorf("Sai roi, phai la 1")
+	}
+
+	result2 := onlyYou.AddOther()
+	if result2 != 2{
+		t.Error("Result must be 2")
+	}
+}
