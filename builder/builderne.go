@@ -1,4 +1,4 @@
-package creational
+package builder
 
 type user struct {
 	name  string
