@@ -1,5 +1,9 @@
 package builder
 
+// Abstract complex creations so that object creation is separate from the object user
+// Create an object step by step by filling its fields and creating the embedded objects
+// Reuse the object creation algorithm between many object
+
 type BuildProcess interface {
 	SetWheels() BuildProcess
 	SetSeats() BuildProcess

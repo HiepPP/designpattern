@@ -1,5 +1,8 @@
 package singleton
 
+// We need a single, shared value, of some particular type
+// We need restrict object creation of some type to a single unit along the entire program
+
 import "sync"
 
 var (

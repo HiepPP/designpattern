@@ -5,6 +5,11 @@ import (
 	"fmt"
 )
 
+// Delegating the creation of new instance of structures to a different part of the program
+// Working at the interface level instead of with concrete implementations
+// Grouping families of objects to obtain a family object creator
+
+
 const (
 	Cash = 1
 	Visa = 2
