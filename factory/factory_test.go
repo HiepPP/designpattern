@@ -1,7 +1,6 @@
 package factory
 
 import (
-	"strings"
 	"testing"
 )
 
@@ -11,10 +10,9 @@ func TestCreatePaymentMethodCash(t *testing.T) {
 		t.Fatal("A payment method of type cash must exist")
 	}
 
-	msg := payment.Pay(10.30)
-	if strings.Contains(msg, "paid using cash") {
-		t.Error("The cash payment method message wasn't correct")
+	success, msg := payment.Pay(10.30)
+	if !success {
+		t.Error("Fail payment")
 	}
-
 	t.Log("LOG:", msg)
 }
